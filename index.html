@@ -36,5 +36,23 @@
         </div>
     </div>
 
+    <script>
+
+        const apiKey = "349168452166ff399cd2268351f80868";
+        const apiUrlBeta = "https://api.openweathermap.org/data/2.5/weather?q=atlanta&appid=[]&units=metric";
+        const apiUrl = "https://api.openweathermap.org/data/2.5/weather?&units=metric&q=atlanta";
+
+        async function checkWeather(){
+            const response = await fetch(apiUrl + `&appid=${apiKey}`);
+            var data = await response.json();
+
+            console.log(data);
+        }
+
+        checkWeather()
+
+    </script>
+
+
 </body>
 </html>
